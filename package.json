@@ -1,0 +1,31 @@
+{
+  "name": "flywikiviewer",
+  "version": "1.0.0",
+  "description": "Basic Wikipedia viewer",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-css && npm run build-js && cp assets/view/index.html public/index.html",
+    "build-css": "lessc assets/less/*.less public/app.css",
+    "build-js": "babel assets/js/*.js --out-file public/app.js",
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flydze/flywikiviewer.git"
+  },
+  "author": "flydze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flydze/flywikiviewer/issues"
+  },
+  "homepage": "https://github.com/flydze/flywikiviewer#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "debug": "^2.6.0",
+    "less": "^2.7.2"
+  }
+}
